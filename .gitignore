@@ -19,8 +19,8 @@ pip-wheel-metadata/
 
 .ipynb_checkpoints/
 
-src/data/raw/
-src/data/cleaned/
+src/insurance/data/raw/
+src/insurance/data/cleaned/
 data/interim/
 data/external/
 
