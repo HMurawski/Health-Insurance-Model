@@ -21,6 +21,7 @@ pip-wheel-metadata/
 
 src/insurance/data/raw/
 src/insurance/data/cleaned/
+src/insurance/data/splitted/
 data/interim/
 data/external/
 
