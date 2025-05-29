@@ -27,6 +27,26 @@ def get_salary_bounds(col: pd.Series) -> tuple[float, float]:
     iqr = q3 - q1
     return q1 - 1.5 * iqr, q3 + 1.5 * iqr
 
+def label_encode_categoricals(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Label-encodes selected categorical columns.
+
+    Currently supports:
+    - insurance_plan (e.g., Bronze → 0, Silver → 1, Gold → 2)
+    
+    Also drops 'income_level' if present (deemed redundant).
+    """
+    df = df.copy()
+
+    if "insurance_plan" in df.columns:
+        plan_map = {"Bronze": 0, "Silver": 1, "Gold": 2}
+        df["insurance_plan"] = df["insurance_plan"].map(plan_map)
+
+    if "income_level" in df.columns:
+        df.drop(columns="income_level", inplace=True)
+
+    return df
+
 
 # ------------------------------------------------------------------ #
 # Main cleaning routine

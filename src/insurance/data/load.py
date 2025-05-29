@@ -5,6 +5,7 @@ from pathlib import Path
 
 DATA_DIR  = Path(__file__).resolve().parent              # …/src/insurance/data
 RAW_PATH  = DATA_DIR / "raw" / "premiums.xlsx"
+AGE_PATH  = DATA_DIR / "raw" / "premiums_young_with_gr.xlsx"
 CLEAN_DIR = DATA_DIR / "cleaned"                        
 
 def load_raw(path: Path | str = RAW_PATH) -> pd.DataFrame:
