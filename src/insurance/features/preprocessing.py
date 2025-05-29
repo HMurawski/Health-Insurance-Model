@@ -38,3 +38,33 @@ def make_preprocessor() -> ColumnTransformer:
         ],
         remainder="drop",
     )
+
+def make_preprocessor_young() -> ColumnTransformer:
+    """
+    Variant of make_preprocessor() that includes 'genetical_risk' as a numerical feature.
+    """
+    num_cols = [
+        "age",
+        "number_of_dependants",
+        "income_lakhs",
+        "insurance_plan",
+        "normalized_risk_score",
+        "genetical_risk"
+    ]
+
+    cat_cols = [
+        "gender",
+        "region",
+        "marital_status",
+        "bmi_category",
+        "smoking_status",
+        "employment_status"
+    ]
+
+    return ColumnTransformer(
+        [
+            ("num", MinMaxScaler(), num_cols),
+            ("cat", OneHotEncoder(drop="first", dtype=int), cat_cols),
+        ],
+        remainder="drop",
+    )
