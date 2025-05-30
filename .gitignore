@@ -24,7 +24,7 @@ src/insurance/data/cleaned/
 src/insurance/data/splitted/
 data/interim/
 data/external/
-
+src/insurance/app/check.py
 
 models/
 *.joblib

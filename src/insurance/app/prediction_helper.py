@@ -29,7 +29,7 @@ def _latest(pattern: str) -> Path:
         raise FileNotFoundError(f"No model found {pattern} in {ARTIFACTS_DIR}")
     return max(files, key=lambda p: p.stat().st_mtime)
 
-YOUNG_MODEL = joblib.load(_latest("premium_YOUNG_*.joblib"))
+YOUNG_MODEL = joblib.load(_latest("premium_young_*.joblib"))
 REST_MODEL  = joblib.load(_latest("premium_rest_*.joblib"))
 
 # ──────────────────────────────────── helpery
