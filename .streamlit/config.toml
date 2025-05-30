@@ -1,0 +1,7 @@
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
+[general]
+page = "src/insurance/app/main.py"
