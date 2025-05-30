@@ -27,7 +27,6 @@ data/external/
 src/insurance/app/check.py
 
 models/
-*.joblib
 *.pkl
 *.h5
 *.pt
