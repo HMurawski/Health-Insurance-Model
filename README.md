@@ -14,6 +14,7 @@
 
 ### 🩺 One-sentence pitch
 > **Problem** Manual estimation of health insurance premiums can be inaccurate and time-consuming.
+> 
 > **Solution** A ML-powered web app that delivers instant, personalised premium quotes with ≥ 97 % of predictions **within ±10 %** error.
 
 ---
